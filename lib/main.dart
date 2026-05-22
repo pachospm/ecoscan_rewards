@@ -4,41 +4,45 @@ import 'package:intl/date_symbol_data_file.dart';
 import 'package:ecoscan_rewards/core/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 
-void main()  async{
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('es', null);
 
-  // Inicializar formatos de fechas en español
-  await initializeDateFormatting('es', '');
-
-  // Barra de estado transparente con iconos claros
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.light,
       systemNavigationBarColor: AppTheme.backgroundDark,
-      systemNavigationBarIconBrightness: Brightness.light
-    )
+      systemNavigationBarIconBrightness: Brightness.light,
+    ),
   );
-  runApp(const EconScanApp());
+
+  runApp(const EcoScanApp());
 }
 
-class EconScanApp extends StatelessWidget {
-  const EconScanApp({super.key});
+class EcoScanApp extends StatelessWidget {
+  const EcoScanApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      // Todos los ViewModels disponibles en el árbol de widgets
       providers: [
-        //ChangeNotifierProvider(create: (_) => AuthViewModel());
+        ChangeNotifierProvider(create: (_) => AuthViewModel()),
+        ChangeNotifierProvider(create: (_) => ScanViewModel()),
+        ChangeNotifierProvider(create: (_) => RecyclerDashboardViewModel()),
+        ChangeNotifierProvider(create: (_) => RewardViewModel()),
+        ChangeNotifierProvider(create: (_) => AdminDashboardViewModel()),
+        ChangeNotifierProvider(create: (_) => RecordsViewModel()),
       ],
       child: MaterialApp(
-        title: 'EconScan Rewards',
+        title: 'EcoScan Rewards',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.darkTheme,
-        //initialRoute: AppRoutes.splash,
-        //onGenerateRoute: AppRoutes.onGenerateRoute,
+        initialRoute: AppRoutes.splash,
+        onGenerateRoute: AppRoutes.onGenerateRoute,
       ),
     );
   }
 }
+
