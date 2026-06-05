@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/date_symbol_data_file.dart';
-import 'package:ecoscan_rewards/core/theme/app_theme.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
-
+import 'package:ecoscan_rewards/core/routes/app_routes.dart';
+import 'package:ecoscan_rewards/core/theme/app_theme.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/admin_dashboard_viewmodel.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/auth_viewmodel.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/records_viewmodel.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/recycler_dashboard_viewmodel.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/reward_viewmodel.dart';
+import 'package:ecoscan_rewards/presentation/viewmodels/scan_viewmodel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,4 +51,3 @@ class EcoScanApp extends StatelessWidget {
     );
   }
 }
-

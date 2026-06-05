@@ -1,4 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ecoscan_rewards/presentation/views/auth/splash_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/auth/login_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/recycler_home_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/scan_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/detection_result_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/recycling_history_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/rewards_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/recycler/profile_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/admin/admin_home_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/admin/users_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/admin/recycling_records_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/admin/detection_review_screen.dart';
+import 'package:ecoscan_rewards/presentation/views/admin/stats_screen.dart';
 
 class AppRoutes {
   AppRoutes._();
