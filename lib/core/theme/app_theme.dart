@@ -21,10 +21,10 @@ class AppTheme {
 
   //Colores por tipo de material (usados en badges y gráficas)
   static const Map<String, Color> materialColors = {
-    'plastico':Color(0xFF42A5F5),
+    'plástico':Color(0xFF42A5F5),
     'vidrio': Color(0xFF26C6DA),
     'metal': Color(0xFF78909C),
-    'carton': Color(0xFFA1887F),
+    'cartón': Color(0xFFA1887F),
     'papel' : Color.fromARGB(202, 255, 244, 88),
     'desconocido': Color(0xFF90A4AE),
   };
@@ -138,7 +138,7 @@ class AppTheme {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: BorderSide(color: Colors.white.withOpacity(1.1))
+          borderSide: BorderSide(color: Colors.white.withOpacity(0.1))
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
