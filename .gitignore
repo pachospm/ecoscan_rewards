@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Material docente solo local (no subir al repositorio)
+COMO_SE_HIZO.md
